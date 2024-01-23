@@ -13,5 +13,5 @@
     'depends': ['base'],
     'data': [],
     'demo': [],
-    'application': 'True',  
+    'application': 'True',
 }
