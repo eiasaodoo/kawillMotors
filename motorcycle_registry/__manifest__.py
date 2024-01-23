@@ -1,7 +1,7 @@
 {
     'name': 'Motorcycle Registry',
     'summary': 'Manage Registration of Motorcycles.',
-    'description': 'Motorcycle Regisrty\n================\nThis Modules is used to keep track of Motorcycle Registration and Ownership of each motorcycle of the brand.',
+    'description': 'Motorcycle Registry\n================\nThis Modules is used to keep track of Motorcycle Registration and Ownership of each motorcycle of the brand.',
     'author': 'eiasaodoo',
     'version': '0.0.1',
     'license': 'OPL-1',
