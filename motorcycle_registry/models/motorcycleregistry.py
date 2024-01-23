@@ -2,7 +2,7 @@ from odoo import fields, models
 
 class MotorcycleRegistry(models.Model):
     _name = 'motorcycle.registry'
-    _description = 'Motrcycle Registry'
+    _description = 'Motorcycle Registry'
 
     certificate_title = fields.Binary(string="Titulo de Propiedad", required=True)
     current_milleage = fields.Float(string="Millaje Actual")
