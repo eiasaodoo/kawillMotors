@@ -6,7 +6,7 @@
     'version': '0.0.1',
     'license': 'OPL-1',
     'website': 'https://github.com/eiasaodoo/kawillMotors.git',
-    'category': 'Kawill/Motorcycle Resgistry',
+    'category': 'Kawill/Motorcycle Registry',
     'depends': ['base'],
     'data': [],
     'demo': [],
