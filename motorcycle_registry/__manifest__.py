@@ -9,6 +9,8 @@
     'category': 'Kawill/Motorcycle Registry',
     'depends': ['base'],
     'data': [],
-    'demo': [],
+    'demo': [
+        'demo/motorcycle_demo.xml',
+    ],
     'application': 'True'
 }
