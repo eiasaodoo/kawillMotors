@@ -8,7 +8,11 @@
     'website': 'https://github.com/eiasaodoo/kawillMotors.git',
     'category': 'Kawill/Motorcycle Registry',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/motorcycle_registry_groups.xml',
+        'security/ir.model.access.csv',
+        'security/motorcycle_registry_security.xml',
+    ],
     'demo': [
         'demo/motorcycle_demo.xml',
     ],

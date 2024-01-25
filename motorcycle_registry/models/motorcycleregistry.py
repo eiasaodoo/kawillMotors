@@ -4,6 +4,8 @@ class MotorcycleRegistry(models.Model):
     _name = 'motorcycle.registry'
     _description = 'Motorcycle Registry'
 
+    active = fields.Boolean(default=True)
+
     certificate_title = fields.Binary(string="Titulo de Propiedad")
     current_mileage = fields.Float(string="Millaje Actual")
     name = fields.Char(string="Nombre", required=True)
