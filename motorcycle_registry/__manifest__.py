@@ -12,7 +12,8 @@
         'security/motorcycle_registry_groups.xml',
         'security/ir.model.access.csv',
         'security/motorcycle_registry_security.xml',
-        'views/motorcycle_registry_menuitems.xml', 
+        'views/motorcycle_registry_menuitems.xml',
+        'views/motorcycle_registry_views.xml',
     ],
     'demo': [
         'demo/motorcycle_demo.xml',
