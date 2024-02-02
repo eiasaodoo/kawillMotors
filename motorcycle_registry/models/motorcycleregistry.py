@@ -8,20 +8,25 @@ class MotorcycleRegistry(models.Model):
     _rec_name = "registry_number"
     _sql_constraints = [('vin_unique', 'UNIQUE(vin)', 'VIN number already exist..')]
 
-
     active = fields.Boolean(default=True)
 
+    owner_id = fields.Many2one(comodel_name="res.partner", string="Owner", ondelete='restrict', required=True, store=True)
+    owner_phone = fields.Char(related='owner_id.phone', string="Phone", readonly=True)
+    owner_email = fields.Char(related='owner_id.email', string="Email", readonly=True)
+    
     certificate_title = fields.Binary(string="Certificate Title")
     current_mileage = fields.Float(string="Current Mileage")
     date_registry = fields.Date(string="Registration Date")
-    first_name = fields.Char(string="First Name", required=True)
-    last_name = fields.Char(string="Last Name", required=True)
     license_plate = fields.Char(string="Licence Plate")
     
     registry_number = fields.Char(string="Registry Number",
                                    default="MRN", copy=False, required=True, readonly=True)
     
     vin = fields.Char(string="VIN", required=True)
+
+    make = fields.Char(string="Make", compute="_compute_fields", readonly=True, store=True)
+    model = fields.Char(string="Model", compute="_compute_fields", readonly=True, store=True)
+    year = fields.Char(string="Year", compute="_compute_fields", readonly=True, store=True)
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -43,3 +48,14 @@ class MotorcycleRegistry(models.Model):
                 raise ValidationError("The license plate must follow the pattern: 1 to 4 uppercase letters, "
                                       "1 to 3 digits, followed by up to 2 optional uppercase letters.")
 
+    @api.depends('vin')
+    def _compute_fields(self):
+        for record in self:
+            if record.vin and len(record.vin) >= 4:
+                record.make = record.vin[0:2].upper()
+                record.model = record.vin[2:4].upper()
+                record.year = record.vin[4:6]
+            else:
+                record.make = ''
+                record.model = ''
+                record.year = ''
