@@ -12,11 +12,12 @@
         'security/motorcycle_registry_groups.xml',
         'security/ir.model.access.csv',
         'security/motorcycle_registry_security.xml',
+        'data/motorcycle_registry_number_data.xml',
         'views/motorcycle_registry_menuitems.xml',
         'views/motorcycle_registry_views.xml',
     ],
     'demo': [
-        'demo/motorcycle_demo.xml',
+        'demo/motorcycle_registry_demo.xml',
     ],
     'application': 'True'
 }

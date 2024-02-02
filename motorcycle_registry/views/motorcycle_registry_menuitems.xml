@@ -15,16 +15,9 @@
     <menuitem name="Motorcycle Regisrty"
         id="menu_motorcycle_registry"
         sequence="1"
-        web_icon="motorcycle_registry,static/description/icon.png">
-    
-        <menuitem name="Motorcycle"
-            id="menu_motorcycle_registry_sub"
-            sequence="2">
-                <menuitem name="Registry"
-                    id="menu_registry"
-                    sequence="3"
-                    action="motorcycle_registry_list_action">
-                </menuitem>
+        web_icon="motorcycle_registry,static/description/icon.png">    
+        <menuitem name="Motorcycle" id="menu_motorcycle_registry_sub" sequence="2">
+                <menuitem name="Registry" id="menu_registry" sequence="3" action="motorcycle_registry_list_action"/>
         </menuitem>
     </menuitem>
 </odoo>

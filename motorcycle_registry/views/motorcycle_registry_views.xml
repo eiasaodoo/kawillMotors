@@ -32,6 +32,7 @@
             </form>
         </field>
     </record>
+    
     <record id="motorcycle_registry_view_list" model="ir.ui.view">
         <field name="name">motorcycle.registry.view.list</field>
         <field name="model">motorcycle.registry</field>
@@ -46,6 +47,7 @@
             </tree>
         </field>
     </record>
+    
     <record id="motorcycle_registry_view_search" model="ir.ui.view">
         <field name="name">motorcycle.registry.view.search</field>
         <field name="model">motorcycle.registry</field>
