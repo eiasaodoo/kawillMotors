@@ -16,7 +16,6 @@
         'views/motorcycle_registry_menuitems.xml',
         'views/motorcycle_registry_views.xml',
     ],
-    'demo': [
-    ],
+    'demo': [],
     'application': 'True'
 }
