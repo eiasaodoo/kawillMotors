@@ -55,29 +55,4 @@
             </tree>
         </field>
     </record>
-    
-    <record id="motorcycle_registry_view_search" model="ir.ui.view">
-        <field name="name">motorcycle.registry.view.search</field>
-        <field name="model">motorcycle.registry</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="registry_number"/>
-                <field name="vin"/>
-                <field name="make"/>
-                <field name="model"/>
-                <field name="year"/>
-                <field name="owner_id"/>
-                <field name="owner_phone"/>
-                <field name="owner_email"/>
-                <field name="license_plate"/>
-                <filter name="groupby_date_registry" string="Date Registry" context="{'group_by':'date_registry'}"/>
-                <filter name="groupby_make" string="Make" context="{'group_by':'make'}"/>
-                <filter name="groupby_model" string="Model" context="{'group_by':'model'}"/>
-                <filter name="groupby_year" string="Year" context="{'group_by':'year'}"/>
-            </search>
-            <searchpanel>
-                <field name="owner_id" select="multi" enable_counters="1"/>
-            </searchpanel>
-        </field>
-    </record>
 </odoo>
