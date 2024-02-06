@@ -16,7 +16,7 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>Resport Title</h2>
-                        <p>This object's name is <span t-field="doc.name"/></p>
+                        <p>This object's name is <span t-field="doc.owner_id"/></p>
                     </div>
                 </t>
             </t>
