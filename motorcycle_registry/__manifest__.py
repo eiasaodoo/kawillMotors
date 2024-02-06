@@ -15,6 +15,7 @@
         'data/motorcycle_registry_number_data.xml',
         'views/motorcycle_registry_menuitems.xml',
         'views/motorcycle_registry_views.xml',
+        'reports/motorcycle_registry_report_templates.xml',
     ],
     'demo': [],
     'application': 'True'
