@@ -51,6 +51,5 @@
         <field name="report_name">motorcycle_registry.report_motorcycle_registry</field>
         <field name="binding_model_id" ref="model_motorcycle_registry"/>
         <field name="binding_type">report</field>
-        <field name="paperformat_id" ref="base.paperformat_A4"/>
     </record>
 </odoo>
