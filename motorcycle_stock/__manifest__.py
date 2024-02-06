@@ -12,12 +12,10 @@
     'license': 'OPL-1',
     'website': "https://github.com/eiasaodoo/kawillMotors.git",
     'category': 'Kawill/Motorcycle Registry',
-    'depends': ['stock', 'motorcycle_registry'],
+    'depends': ['stock'],
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/product_template_inherit_views.xml',
     ],
     'demo': [],
-    'application': 'True'
+    'auto_install': True
 }
