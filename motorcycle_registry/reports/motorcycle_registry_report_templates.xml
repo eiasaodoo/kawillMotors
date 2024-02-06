@@ -2,10 +2,10 @@
 
 <odoo>
     <record id="report_mcr_action" model="ir.actions.report">
-        <field name="name">Minimum Viable Template</field>
+        <field name="name">Motorcycle Registry Template</field>
         <field name="model">motorcycle.registry</field>
         <field name="report_type">qweb-html</field>
-        <field name="report_name">motorcycle.registry_mcr</field>
+        <field name="report_name">motorcycle.registry.report_mcr</field>
         <field name="binding_model_id" ref="model_motorcycle_registry"/>
         <field name="binding_type">report</field>
     </record>
