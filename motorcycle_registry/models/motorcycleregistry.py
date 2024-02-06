@@ -6,7 +6,7 @@ class MotorcycleRegistry(models.Model):
     _name = 'motorcycle.registry'
     _description = 'Motorcycle Registry'
     _rec_name = "registry_number"
-    _sql_constraints = [('vin_unique', 'UNIQUE(vin)', 'VIN number already exist..')]
+    _sql_constraints = [('vin_unique', 'UNIQUE(vin)', 'VIN number already exist.')]
 
     active = fields.Boolean(default=True)
 
