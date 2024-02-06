@@ -1,11 +1,9 @@
 {
-    'name': "motorcycle_stock",
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'name': "Motorcycle Stock",
+    'summary': """Manage Motorcycle's as a product""",
 
     'description': """
-        Long description of module's purpose
+        Motorcycle Stock\n================\nThis Modules is used to add Motorcycle's as a product.
     """,
     'author': "eiasaodoo",
     'version': '0.0.1',
