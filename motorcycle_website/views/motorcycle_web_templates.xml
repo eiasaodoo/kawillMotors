@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="motorcycle_website">
+        <t t-call="website.layout">
+            <t t-set="title">Motorcycle Registry</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <h1>Motorcycles</h1>
+                    <t t-foreach="motorcycles_registries" t-as="motorcycle_registry">
+                        <t t-out="motorcycle_registry.owner_id"/>                        
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
