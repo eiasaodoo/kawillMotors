@@ -5,17 +5,18 @@
         <field name="name">Motorcycle Registry Template</field>
         <field name="model">motorcycle.registry</field>
         <field name="report_type">qweb-html</field>
-        <field name="report_name">motorcycle.registry.report_mcr</field>
+        <field name="report_name">motorcycle_registry.report_mcr</field>
         <field name="binding_model_id" ref="model_motorcycle_registry"/>
         <field name="binding_type">report</field>
     </record>
+    
     <template id="report_mcr">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>Resport Title</h2>
-                        <p>This object's name is <sapan t-field="doc.dame"/></p>
+                        <p>This object's name is <span t-field="doc.name"/></p>
                     </div>
                 </t>
             </t>
