@@ -1,25 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
-    <record id="report_mcr_action" model="ir.actions.report">
-        <field name="name">Motorcycle Registry Template</field>
-        <field name="model">motorcycle.registry</field>
-        <field name="report_type">qweb-html</field>
-        <field name="report_name">motorcycle_registry.report_mcr</field>
-        <field name="binding_model_id" ref="model_motorcycle_registry"/>
-        <field name="binding_type">report</field>
-    </record>
-    
-    <template id="report_mcr">
+    <template id="report_motorcycle_registry">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout">
                     <div class="page">
-                        <h2>Resport Title</h2>
-                        <p>This object's name is <span t-field="doc.owner_id"/></p>
+                        <h2>Motorcycle Registry Report</h2>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Registry Number</th>
+                                    <th>VIN</th>
+                                    <th>Owner</th>
+                                    <th>Phone</th>
+                                    <th>Email</th>
+                                    <th>Make</th>
+                                    <th>Model</th>
+                                    <th>Year</th>
+                                    <th>License Plate</th>
+                                    <th>Current Mileage</th>
+                                    <th>Registration Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span t-field="doc.registry_number"/></td>
+                                    <td><span t-field="doc.vin"/></td>
+                                    <td><span t-field="doc.owner_id.name"/></td>
+                                    <td><span t-field="doc.owner_phone"/></td>
+                                    <td><span t-field="doc.owner_email"/></td>
+                                    <td><span t-field="doc.make"/></td>
+                                    <td><span t-field="doc.model"/></td>
+                                    <td><span t-field="doc.year"/></td>
+                                    <td><span t-field="doc.license_plate"/></td>
+                                    <td><span t-field="doc.current_mileage"/></td>
+                                    <td><span t-field="doc.date_registry"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </t>
             </t>
         </t>
     </template>
+
+    <record id="report_mcr_action" model="ir.actions.report">
+        <field name="name">Motorcycle Registry Report</field>
+        <field name="model">motorcycle.registry</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">motorcycle_registry.report_motorcycle_registry</field>
+        <field name="binding_model_id" ref="model_motorcycle_registry"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_A4"/>
+    </record>
 </odoo>
