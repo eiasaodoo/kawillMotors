@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
     <record id="motorcycle_registry_view_map" model="ir.ui.view">
         <field name="name">motorcycle.registry.view.map</field>
@@ -12,6 +11,6 @@
         <field name="sequence" eval="4"/>
         <field name="view_mode">map</field>
         <field name="view_id" ref="motorcycle_registry_view_map"/>
-        <field name="act_windows_id" ref="motorcycle_registry.motorcycle_registry_list_action"/>
+        <field name="act_window_id" ref="motorcycle_registry.motorcycle_registry_list_action"/> 
     </record>
 </odoo>
