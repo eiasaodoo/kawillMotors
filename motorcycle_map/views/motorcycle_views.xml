@@ -9,7 +9,7 @@
         </field>
     </record>
     <record id="res_partner_action_contacts_view_map" model="ir.actions.act_window.view">
-        <field name="name" eval="3"/>
+        <field name="sequence" eval="4"/>
         <field name="view_mode">map</field>
         <field name="view_id" ref="motorcycle_registry_view_map"/>
         <field name="act_windows_id" ref="motorcycle_registry.motorcycle_registry_list_action"/>
