@@ -8,7 +8,7 @@
             <map res_partner="owner_id"/>
         </field>
     </record>
-    <record id="motorcycle_registry_view_map" model="ir.actions.act_window.view">
+    <record id="res_partner_action_contacts_view_map" model="ir.actions.act_window.view">
         <field name="name" eval="3"/>
         <field name="view_mode">map</field>
         <field name="view_id" ref="motorcycle_registry_view_map"/>
