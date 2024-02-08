@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="motorcycle1" model="motorcycle.registry">
+            <field name="vin">KAIN220M00023</field>
+            <field name="current_mileage">250</field>
+        </record>
+        <record id="motorcycle2" model="motorcycle.registry">
+            <field name="vin">KAIN220M00023</field>
+            <field name="current_mileage">5250</field>
+            <field name="date_registry">2023-01-27</field>
+        </record>
+        <record id="motorcycle3" model="motorcycle.registry">
+            <field name="vin">KAIN220M00023</field>
+            <field name="current_mileage">23250</field>
+            <field name="date_registry" eval="(DateTime.today() - relativedelta(months=1)).strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</odoo>

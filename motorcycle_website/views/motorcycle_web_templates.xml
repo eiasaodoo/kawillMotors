@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="motorcycle_registry" name="Motorcycle Registry">
+        <t t-call="website.layout">
+            <t t-set="title">Motorcycle Registry</t>
+            <div class="container mt-5">
+                <h1 class="text-center mb-4">Motorcycle Registry</h1>
+                <div class="row">
+                    <t t-foreach="motorcycles" t-as="motorcycle">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow">
+                                <div class="card-body">
+                                    <h5 class="card-title"><t t-esc="motorcycle.make"/> <t t-esc="motorcycle.model"/> <t t-esc="motorcycle.year"/></h5>
+                                    <p class="card-text"><strong>Owner:</strong> <t t-esc="motorcycle.owner_id.name"/></p>
+                                    <p class="card-text"><strong>VIN:</strong> <t t-esc="motorcycle.vin"/></p>
+                                    <p class="card-text"><strong>License Plate:</strong> <t t-esc="motorcycle.license_plate"/></p>
+                                    <p class="card-text"><strong>Email:</strong> <t t-esc="motorcycle.owner_email"/></p>
+                                    <p class="card-text"><strong>Phone:</strong> <t t-esc="motorcycle.owner_phone"/></p>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
+    
+    <template id="motorcycle_compare" name="Motorcycle Products">
+        <t t-call="website.layout">
+            <div id="wrap" class="pt-5 pb-5">
+                <div class="container">
+                    <h1 class="text-center mb-5">Compare Motorcycle Products</h1>
+                    <div class="row">
+                        <t t-foreach="motorcycles" t-as="motorcycle">
+                            <div class="col-md-4 d-flex align-items-stretch">
+                                <div class="card mb-4 shadow-sm" style="width: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><t t-esc="motorcycle.name"/></h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><strong>Make:</strong> <t t-esc="motorcycle.make"/></li>
+                                            <li class="list-group-item"><strong>Model:</strong> <t t-esc="motorcycle.model"/></li>
+                                            <li class="list-group-item"><strong>Year:</strong> <t t-esc="motorcycle.year"/></li>
+                                            <li class="list-group-item"><strong>Battery Capacity:</strong> <t t-esc="motorcycle.battery_capacity"/></li>
+                                            <li class="list-group-item"><strong>Charge Time:</strong> <t t-esc="motorcycle.charge_time"/></li>
+                                            <li class="list-group-item"><strong>Curb Weight:</strong> <t t-esc="motorcycle.curb_weight"/></li>
+                                            <li class="list-group-item"><strong>Horsepower:</strong> <t t-esc="motorcycle.horsepower"/></li>
+                                            <li class="list-group-item"><strong>Range:</strong> <t t-esc="motorcycle.range"/></li>
+                                            <li class="list-group-item"><strong>Top Speed:</strong> <t t-esc="motorcycle.top_speed"/></li>
+                                            <li class="list-group-item"><strong>Torque:</strong> <t t-esc="motorcycle.torque"/></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
